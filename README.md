@@ -37,7 +37,7 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
   - urban, gender, voted, ASD, married, hand, engnat, VCL1~16의 특성 중요도가 낮다고 판단하여 모델 성능을 높이기 위해 해당 열을 삭제하였다.  
 
 ## Models
-***PyCaret의 여러 메소드를 이용해 모델들을 비교하고, 각 모델별로 튜닝을 실시하고 모델 블랜딩을 수행하였다.*** 
+***PyCaret의 compare_models()메소드를 이용해 모델들을 비교하고, tune_model()메소드를 통해 각 모델별로 튜닝을 실시하고 blend_models()메소드를 통해 모델 블랜딩을 수행하였다.*** 
 1. 전처리 과정을 마친 train data를 sklearn의 train_test_split 를 통해 train, test data로 랜덤하게 나눠주었다. 
 2. compare_models 함수를 통해 정확도(Accuracy)를 기준으로 앙상블시킬 상위 3개의 모델을 선정하였다. 그 결과 Random Forest Classifier, Extra Trees Classifier, Light Gradient Boosting Machine(LGBM)이 선정되었고, 성능 향상을 위해 각각의 모델을 tune_model함수를 통해 튜닝을 시켜주었다. 
 <img src = "https://user-images.githubusercontent.com/88043302/189058191-50ef8206-4f16-40a3-bdcd-d52c01b908e3.png" width = "60%" height ="40%">
