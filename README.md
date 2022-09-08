@@ -43,7 +43,7 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 <img src = "https://user-images.githubusercontent.com/88043302/189058191-50ef8206-4f16-40a3-bdcd-d52c01b908e3.png" width = "60%" height ="40%">
 3. 튜닝 완료한 3개의 모델 블랜딩을 진행하고, 최종 모델 학습을 진행하였다. 
 <img src = "https://user-images.githubusercontent.com/88043302/189058596-ec328dc8-ace9-46fe-98bf-60bc2965c0ed.png" width="40%" height="40%">
-
+<img src = "https://user-images.githubusercontent.com/88043302/189058829-4009fd72-afd8-410d-949b-95c7be83861b.png" width="60%" height="40%">
 
 ## Results
 ##### final_test_df
