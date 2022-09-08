@@ -23,7 +23,7 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 
 ## Data Preprocessing  
 - 인덱스 행 제거 
-  - 인덱스 행은 불필요하기 때문에 train, test data에서 각각 삭제해주었다.
+  - 불필요한 인덱스 행을 train, test data에서 각각 삭제해주었다.
 
 - 이상치 제거
   - IQR 이상치 탐지: introelapse, testelapse, surveyelapse의 이상치 탐지 및 제거를 수행하였다.
