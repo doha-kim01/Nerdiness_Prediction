@@ -10,7 +10,7 @@ https://dacon.io/competitions/open/235902/overview/description
 #### 4. 모델 학습
 #### 5. 최종 결과
 ## 프로젝트 목표
-심리학 테스트 데이터를 분석하여 "심리 성향을 예측"하는 알고리즘을 개발하는 것이 대회의 목적이다.
+심리학 테스트 데이터를 분석하여 "심리 성향을 예측"하는 알고리즘을 개발하는 것이 대회의 목적이다. 본 팀은 Google Colab에서 Python을 통해 실습하였다. 
 ## 데이터
 <img src = "https://user-images.githubusercontent.com/88043302/189008469-81f0fbe9-def2-41c7-83dc-6e70f4fd794f.png" width="30%" height="30%">
 
@@ -21,6 +21,10 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 ## 데이터 전처리  
 - 인덱스 행 제거 
   - 인덱스 행은 불필요하기 때문에 train, test data에서 각각 삭제해주었다.
+'''python
+train_df = train_df.iloc[:,1:] 
+
+
 - 이상치 제거
   - IQR 이상치 탐지: introelapse, testelapse, surveyelapse의 이상치 탐지 및 제거를 수행하였다.
   - familysize와 age에 이상치가 존재하지만, IQR로 해결되지 않았다. 따라서, familysize는 11명 미만인 데이터만 남기고, age는 120살 미만인 데이터만 남기는 방식으로 이상치를 제거하였다. 
