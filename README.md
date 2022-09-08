@@ -49,7 +49,7 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 ## Results
 test data를 finalized된 최종 모델에 넣고 nerdiness 예측을 진행하였을 때, 다음과 같이 예측 결과가 도출되었다. 
 
-<img src = "https://user-images.githubusercontent.com/88043302/189061753-6fbd0475-ad2b-4a18-ba4a-91bf32b7230c.png" width="60%" height="50%">
+<img src = "https://user-images.githubusercontent.com/88043302/189061753-6fbd0475-ad2b-4a18-ba4a-91bf32b7230c.png" width="40%" height="30%">
 
 대회에 최종 제출한 결과, public score 0.80399, private score 0.79721을 기록하였다.
 
