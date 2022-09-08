@@ -19,3 +19,11 @@
 ##### 3. null data 채우기: Q1~26에 해당하는 응답이 모두 비어있는 8개의 행은 아예 삭제하고, 나머지 null data는 해당 열의 평균을 반올림하여 정수값으로 만들어줘서 채웠다. 
 ##### 4. age 범주화: 연속형 변수인 age를 10살 단위로 범주화하였다. 
 ##### 5. 덜 중요하다고 판단되는 feature 열 삭제: urban, gender, voted, ASD, married, hand, engnat, VCL1~16의 특성 중요도가 낮다고 판단하여 모델 성능을 높이기 위해 해당 열을 삭제하였다.  
+
+## 모델 학습
+##### 1. 전처리 과정을 마친 train data를 sklearn의 train_test_split 를 통해 train, test data로 랜덤하게 나눠준다. 
+##### 2. compare_models 함수를 통해 정확도(Accuracy)를 기준으로 앙상블시킬 상위 3개의 모델을 선정하였다. 그 결과 Random Forest Classifier, Extra Trees Classifier, Light Gradient Boosting Machine(LGBM)이 선정되었고, 성능 향상을 위해 각각의 모델을 tune_model함수를 통해 튜닝을 시켜주었다. 
+##### 3. 튜닝 완료한 3개의 모델 블랜딩을 진행하고, 최종 모델 학습을 진행하였다. 
+
+## 최종 결과
+##### final_test_df
