@@ -11,7 +11,7 @@
 ## 데이터
 <img src = "https://user-images.githubusercontent.com/88043302/189008469-81f0fbe9-def2-41c7-83dc-6e70f4fd794f.png" width="30%" height="30%">
 
-##### 대회 측에서 제공하는 데이터는 train data 14999개, test data 35451개, sample_submission.csv(제출할 양식이 담긴 csv파일)이다. train data에는 target인 nerdiness값과,  68개의 질문에 해당하는 각 응답값들이 담겨있으며, test data에는 nerdiness를 제외한 나머지 68개의 질문에 해당하는 응답값들이 담겨 있다. train data는 모델 학습에 활용하였고, finalized된 최종 모델에 test data를 넣어 nerdiness값을 예측하고, 예측된 nerdiness값들이 담긴 최종 submission.csv를 제출하였다. 
+대회 측에서 제공하는 데이터는 train data 14999개, test data 35451개, sample_submission.csv(제출할 양식이 담긴 csv파일)이다. train data에는 target인 nerdiness값과,  68개의 질문에 해당하는 각 응답값들이 담겨있으며, test data에는 nerdiness를 제외한 나머지 68개의 질문에 해당하는 응답값들이 담겨 있다. train data는 모델 학습에 활용하였고, finalized된 최종 모델에 test data를 넣어 nerdiness값을 예측하고, 예측된 nerdiness값들이 담긴 최종 submission.csv를 제출하였다. 
 
 ## 데이터 전처리  
 - 인덱스 행 제거 : 인덱스 행은 학습에 도움이 되지 않는 불필요한 데이터이기 때문에 train, test data에서 각각 삭제해주었다.
@@ -21,9 +21,9 @@
 - 덜 중요하다고 판단되는 feature 열 삭제: urban, gender, voted, ASD, married, hand, engnat, VCL1~16의 특성 중요도가 낮다고 판단하여 모델 성능을 높이기 위해 해당 열을 삭제하였다.  
 
 ## 모델 학습
-##### 1. 전처리 과정을 마친 train data를 sklearn의 train_test_split 를 통해 train, test data로 랜덤하게 나눠준다. 
-##### 2. compare_models 함수를 통해 정확도(Accuracy)를 기준으로 앙상블시킬 상위 3개의 모델을 선정하였다. 그 결과 Random Forest Classifier, Extra Trees Classifier, Light Gradient Boosting Machine(LGBM)이 선정되었고, 성능 향상을 위해 각각의 모델을 tune_model함수를 통해 튜닝을 시켜주었다. 
-##### 3. 튜닝 완료한 3개의 모델 블랜딩을 진행하고, 최종 모델 학습을 진행하였다. 
+1. 전처리 과정을 마친 train data를 sklearn의 train_test_split 를 통해 train, test data로 랜덤하게 나눠준다. 
+2. compare_models 함수를 통해 정확도(Accuracy)를 기준으로 앙상블시킬 상위 3개의 모델을 선정하였다. 그 결과 Random Forest Classifier, Extra Trees Classifier, Light Gradient Boosting Machine(LGBM)이 선정되었고, 성능 향상을 위해 각각의 모델을 tune_model함수를 통해 튜닝을 시켜주었다. 
+3. 튜닝 완료한 3개의 모델 블랜딩을 진행하고, 최종 모델 학습을 진행하였다. 
 
 ## 최종 결과
 ##### final_test_df
