@@ -41,12 +41,15 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 1. 전처리 과정을 마친 train data를 sklearn의 train_test_split 를 통해 train, test data로 랜덤하게 나눠주었다. 
 2. compare_models 함수를 통해 정확도(Accuracy)를 기준으로 앙상블시킬 상위 3개의 모델을 선정하였다. 그 결과 Random Forest Classifier, Extra Trees Classifier, Light Gradient Boosting Machine(LGBM)이 선정되었고, 성능 향상을 위해 각각의 모델을 tune_model함수를 통해 튜닝을 시켜주었다. 
 <img src = "https://user-images.githubusercontent.com/88043302/189058191-50ef8206-4f16-40a3-bdcd-d52c01b908e3.png" width = "60%" height ="40%">
-3. 튜닝 완료한 3개의 모델 블랜딩을 진행하고, 최종 모델 학습을 진행하였다. 
+3. 튜닝을 완료한 3개의 모델을 블랜딩하고, 최종 모델 학습을 진행하였다. 
 <img src = "https://user-images.githubusercontent.com/88043302/189058596-ec328dc8-ace9-46fe-98bf-60bc2965c0ed.png" width="40%" height="40%">
 <img src = "https://user-images.githubusercontent.com/88043302/189058829-4009fd72-afd8-410d-949b-95c7be83861b.png" width="60%" height="40%">
 
 ## Results
-##### final_test_df
 
 
-## Supplementary points
+
+## Supplementary points (이 내용은 우리끼리만 공유, 추가할 거 있으면 알아서 추가하기) 
+데이터 전처리에서 q_sum 포함못시켜본게 아쉽(코드를 잘못 옮긴건지 sum이 이상하게 출력되어서 시간관계상 뺐음 ㅠㅠ)
+introelapse, surveyelapse, testelapse를 scaling 해보았다면..?? 
+시간관계상 모델 학습시에 파라미터 충분히 변경해보지 못한 것 (폴드 수나 반복횟수 등)
