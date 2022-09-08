@@ -29,9 +29,9 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 - 이상치 제거
   - IQR 이상치 탐지: introelapse, testelapse, surveyelapse의 이상치 탐지 및 제거를 수행하였다.
   - familysize와 age에 이상치가 존재하지만, IQR로 해결되지 않았다. 따라서, familysize는 11명 미만인 데이터만 남기고, age는 120살 미만인 데이터만 남기는 방식으로 이상치를 제거하였다. 
-- null data 채우기
+- 결측치 해결
   - Q1~26에 해당하는 응답이 모두 비어있는 8개의 행은 전부 삭제하였다.
-  - 나머지 null data는 해당 열의 평균을 반올림하여 채웠다. 
+  (- 나머지 null data는 해당 열의 평균을 반올림하여 채웠다. )
 - age 범주화
   - 연속형 변수인 age를 10살 단위로 범주화하였다. 
 - 몇몇 feature 열 삭제
