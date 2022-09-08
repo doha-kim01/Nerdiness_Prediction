@@ -53,7 +53,7 @@ test data를 finalized된 최종 모델에 넣고 nerdiness 예측을 진행하�
 
 대회에 최종 제출한 결과, public score 0.80399, private score 0.79721을 기록하였다.
 
-#### Supplementary points (이 내용은 우리끼리만 공유, 추가할 거 있으면 알아서 추가하기) 
+#### Supplementary points (이 내용은 우리끼리만 공유(나중에 삭제할 것임), 추가할 거 있으면 알아서 추가하기) 
 데이터 전처리에서 q_sum 포함못시켜본게 아쉽(코드를 잘못 옮긴건지 sum이 이상하게 출력되어서 시간관계상 뺐음 ㅠㅠ내가 제대로 넣었다면 정확도 더 높게 나왔을듯...!! )
 introelapse, surveyelapse, testelapse를 scaling 해보았다면..?? 
 시간관계상 모델 학습시에 파라미터 충분히 변경해보지 못한 것 (폴드 수나 반복횟수 등)
