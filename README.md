@@ -17,7 +17,8 @@ https://dacon.io/competitions/open/235902/overview/description
 대회 측에서 제공하는 데이터는 train data 14999개, test data 35451개, sample_submission.csv(제출할 양식이 담긴 csv파일)이다. train data에는 target인 nerdiness값과,  68개의 질문에 해당하는 각 응답값들이 담겨있으며, test data에는 nerdiness를 제외한 나머지 68개의 질문에 해당하는 응답값들이 담겨 있다. train data는 모델 학습에 활용하였고, finalized된 최종 모델에 test data를 넣어 nerdiness값을 예측하고, 예측된 nerdiness값들이 담긴 최종 submission.csv를 제출하였다. 
 
 ## 데이터 전처리  
-- 인덱스 행 제거 : 인덱스 행은 학습에 도움이 되지 않는 불필요한 데이터이기 때문에 train, test data에서 각각 삭제해주었다.
+- 인덱스 행 제거 
+  - 인덱스 행은 불필요하기 때문에 train, test data에서 각각 삭제해주었다.
 - 이상치 제거
   - IQR 이상치 탐지: introelapse, testelapse, surveyelapse의 이상치 탐지 및 제거를 수행하였다.
   - familysize와 age에 이상치가 존재하지만, IQR로 해결되지 않았다. 따라서, familysize는 11명 미만인 데이터만 남기고, age는 120살 미만인 데이터만 남기는 방식으로 이상치를 제거하였다. 
