@@ -12,12 +12,13 @@ https://dacon.io/competitions/open/235902/overview/description
 #### 6. Supplementary points
 
 ## Project Description
-심리학 테스트 데이터를 분석하여 "심리 성향을 예측"하는 알고리즘을 개발하는 것이 대회의 목적이다. 본 팀은 Google Colab에서 Python을 통해 실습하였다. 
+심리학 테스트 데이터를 분석하여 "심리 성향(nerdiness)을 예측"하는 알고리즘을 개발하는 것이 대회의 목적이다. 예측해야하는 값인 nerdiness는 0 또는 1의 값을 가지므로, classification과 관련한 문제이다. 따라서 본 팀은 Google Colab에서 Python으로 PyCaret의 분류알고리즘을 활용하여 nerdiness 예측을 진행하였다. 
+
 
 ## Data
 <img src = "https://user-images.githubusercontent.com/88043302/189008469-81f0fbe9-def2-41c7-83dc-6e70f4fd794f.png" width="30%" height="30%">
 
-대회 측에서 제공하는 데이터는 train data 14999개, test data 35451개, sample_submission.csv(제출할 양식이 담긴 csv파일)이다. train data에는 target인 nerdiness값과,  68개의 질문에 해당하는 각 응답값들이 담겨있으며, test data에는 nerdiness를 제외한 나머지 68개의 질문에 해당하는 응답값들이 담겨 있다. 
+대회 측에서 제공하는 데이터는 train data 14999개, test data 35451개, sample_submission.csv(제출할 양식이 담긴 csv파일)이다. train data에는 target인 nerdiness값과,  68개의 질문에 해당하는 각 응답값들이 담겨있으며, test data에는 nerdiness를 제외한 나머지 68개의 질문에 해당하는 응답값들이 담겨 있다.
 
 train data는 모델 학습에 활용하였고, finalized된 최종 모델에 test data를 넣어 nerdiness값을 예측하고, 예측된 nerdiness값들이 담긴 최종 submission.csv를 제출하였다. 
 
@@ -46,10 +47,10 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 <img src = "https://user-images.githubusercontent.com/88043302/189058829-4009fd72-afd8-410d-949b-95c7be83861b.png" width="60%" height="40%">
 
 ## Results
+test data를 finalized된 최종 모델에 넣고 nerdiness 예측을 진행하였을 때, 다음과 같이 예측 결과가 도출되었다. 
+<img src = "https://user-images.githubusercontent.com/88043302/189061753-6fbd0475-ad2b-4a18-ba4a-91bf32b7230c.png" width="60%" height="50%">
 
-
-
-## Supplementary points (이 내용은 우리끼리만 공유, 추가할 거 있으면 알아서 추가하기) 
-데이터 전처리에서 q_sum 포함못시켜본게 아쉽(코드를 잘못 옮긴건지 sum이 이상하게 출력되어서 시간관계상 뺐음 ㅠㅠ)
+#### Supplementary points (이 내용은 우리끼리만 공유, 추가할 거 있으면 알아서 추가하기) 
+데이터 전처리에서 q_sum 포함못시켜본게 아쉽(코드를 잘못 옮긴건지 sum이 이상하게 출력되어서 시간관계상 뺐음 ㅠㅠ내가 제대로 넣었다면 정확도 더 높게 나왔을듯...!! )
 introelapse, surveyelapse, testelapse를 scaling 해보았다면..?? 
 시간관계상 모델 학습시에 파라미터 충분히 변경해보지 못한 것 (폴드 수나 반복횟수 등)
