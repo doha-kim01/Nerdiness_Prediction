@@ -9,4 +9,4 @@
 ## 프로젝트 목표
 ##### 심리학 테스트 데이터를 분석하여 "심리 성향을 예측"하는 알고리즘을 개발하는 것이 대회의 목적이다.
 ## 데이터
-![image](https://user-images.githubusercontent.com/88043302/189008284-5d13de6e-310a-4ed8-a88d-2261f183b50a.png)
+![image](https://user-images.githubusercontent.com/88043302/189008469-81f0fbe9-def2-41c7-83dc-6e70f4fd794f.png)
