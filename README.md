@@ -30,3 +30,6 @@ https://dacon.io/competitions/open/235902/overview/description
 
 ## 최종 결과
 ##### final_test_df
+
+
+## 보완할 
