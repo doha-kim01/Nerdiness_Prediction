@@ -24,13 +24,9 @@ train data는 모델 학습에 활용하였고, finalized된 최종 모델에 te
 ## Data Preprocessing  
 - 인덱스 행 제거 
   - 인덱스 행은 불필요하기 때문에 train, test data에서 각각 삭제해주었다.
-<img src = "https://user-images.githubusercontent.com/88043302/189054832-0b579724-de73-49ff-9ec0-7abdf617cbf9.png" width = "50%" height = "20%">
-<img src = "https://user-images.githubusercontent.com/88043302/189053827-27ae377f-6a66-49b2-bb42-f267cc71d269.png" width="50%" height="30%">
 
 - 이상치 제거
   - IQR 이상치 탐지: introelapse, testelapse, surveyelapse의 이상치 탐지 및 제거를 수행하였다.
- <img src = "https://user-images.githubusercontent.com/88043302/189055233-414f2079-65ae-4a19-8e32-5dfb610e2afb.png" width = "60%" height = "60%">
- 
   - familysize와 age에 이상치가 존재하지만, IQR로 해결되지 않았다. 따라서, familysize는 11명 미만인 데이터만 남기고, age는 120살 미만인 데이터만 남기는 방식으로 이상치를 제거하였다. 
 - null data 채우기
   - Q1~26에 해당하는 응답이 모두 비어있는 8개의 행은 전부 삭제하였다.
