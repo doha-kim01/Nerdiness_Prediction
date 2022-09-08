@@ -12,7 +12,7 @@
 <img src = "https://user-images.githubusercontent.com/88043302/189008469-81f0fbe9-def2-41c7-83dc-6e70f4fd794f.png" width="30%" height="30%">
 ##### 대회 측에서 제공하는 데이터는 train data 14999개, test data 35451개, sample_submission.csv(제출할 양식이 담긴 csv파일)이다. train data에는 target인 nerdiness값과,  68개의 질문에 해당하는 각 응답들이 담겨있으며, test data에는 nerdiness를 제외한 나머지 응답값들이 담겨 있다. 
 
-## 데이터 전처
+## 데이터 전처리  
 ##### 1. 인덱스 행 제거 : 인덱스 행은 학습에 도움이 되지 않는 불필요한 데이터이기 때문에 train, test data에서 각각 삭제해주었다.
 ##### 2. 이상치 제거: IQR 이상치 탐지 방법으로 introelapse, testelapse, surveyelapse의 이상치 탐지 및 제거를 수행하였다. 또한, familysize와 age에도 이상치가 존재하므로, familysize는 11명 미만인 데이터만 남기고, age는 120살 미만인 데이터만 남기는 방식으로 이상치를 제거하였다. 
 ##### 3. null data 채우기: Q1~26에 해당하는 응답이 모두 비어있는 8개의 행은 아예 삭제하고, 나머지 null data는 해당 열의 평균을 반올림하여 정수값으로 만들어줘서 채웠다. 
