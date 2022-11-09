@@ -56,5 +56,7 @@ test data를 finalized된 최종 모델에 넣고 nerdiness 예측을 진행하�
 
 #### Supplementary points
 -데이터 전처리 과정에서 q_sum 이라는 feature를 추가
+
 -introelapse, surveyelapse, testelapse의 scaling 진행
+
 -fold수나 반복횟수 
